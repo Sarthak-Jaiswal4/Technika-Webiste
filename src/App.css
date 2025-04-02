@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'main-font';
+    src: url('../Darker_Grotesque/DarkerGrotesque-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'team-font';
+    src: url('../Dancing_Script/DancingScript-VariableFont_wght.ttf');
+}
+.main-color{
+    background: linear-gradient(180deg, rgba(54,1,90,1) 19%, rgba(72,2,121,0.92) 61%, rgba(115,3,192,0.72) 100%);
+}
+.team-color{
+    background: linear-gradient(180deg, rgba(115,3,192,0.72) 0%, rgba(77,2,139,1) 17%, rgba(54,1,90,1) 100%);
+}
+
+.bg-blur{
+    background-image: url('../public/noise-50.png');
+}
