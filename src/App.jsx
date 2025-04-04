@@ -11,7 +11,7 @@ function App() {
       {/* <div className='w-full h-screen flex flex-col items-center justify-center bg-gray-900'>
         <h1 className='text-white'>hello</h1>
       </div> */}
-      <Header/>
+      {/* <Header/> */}
       <Outlet/>
     </>
   )

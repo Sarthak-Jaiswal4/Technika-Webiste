@@ -8,6 +8,7 @@ import Team from './components/Team Page/Team.jsx'
 import TeamMember from './components/Team Page/TeamMember.jsx'
 import About from './components/About page/About.jsx'
 import Comepetition from './components/Competetion/Comepetition.jsx'
+import Gallery from './components/gallery/Gallery.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ const router=createBrowserRouter(
       <Route path="/team" element={<Team_Page />}/>  
       <Route path='/about' element={<About/>}/>
       <Route path='/competetion' element={<Comepetition/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>
     </Route>
   )
 )
