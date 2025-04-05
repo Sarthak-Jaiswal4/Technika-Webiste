@@ -5,6 +5,74 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef, useState } from "react";
 import Tilt from "react-parallax-tilt";
 gsap.registerPlugin(ScrollTrigger);
+main
+gsap.registerPlugin(SplitText)
+import Popupform from "./Popupform";
+
+function Comepetition() {
+    const [windowopen, setwindowopen] = useState(false)
+    const [windowinfo, setwindowinfo] = useState({})
+    const[displayform,setdisplayform]=useState(false)
+    const competitionInfo = [
+        {
+            name: "Code Sprint",
+            img: "/clay-banks-0VfnZbQd98c-unsplash.jpg",
+            quote: "Code fast, think faster!",
+            prize: "₹25,000",
+            registrationFee: "₹200",
+            instructions: [
+                "Each team can have up to 3 members.",
+                "You will be given a problem statement at the start.",
+                "You must submit your solution within the given time limit.",
+                "Use of AI tools is not allowed.",
+            ],
+            accentColor:"white"
+        },
+        {
+            name: "Hackathon",
+            img: "/c-f-photography-iV_oBbfZNmg-unsplash.jpg",
+            quote: "Innovate, build, disrupt.",
+            prize: "₹50,000",
+            registrationFee: "₹500",
+            instructions: [
+                "Maximum team size: 4 members.",
+                "Projects must be developed during the event.",
+                "Judging criteria include innovation, feasibility, and presentation.",
+                "You must present a working prototype.",
+            ],
+            accentColor:"amber"
+        },
+        {
+            name: "Tech Quiz",
+            img: "/safar-safarov-koOdUvfGr4c-unsplash.jpg",
+            quote: "Knowledge is power—prove it!",
+            prize: "₹10,000",
+            registrationFee: "₹100",
+            instructions: [
+                "Individual or team participation (max 2 per team).",
+                "The quiz will have 3 rounds: MCQs, rapid-fire, and buzzer round.",
+                "Negative marking is applicable.",
+                "Use of mobile phones is strictly prohibited.",
+            ],
+            accentColor:"blue"
+        },
+        {
+            name: "App Development Challenge",
+            img: "/jason-leung-1DjbGRDh7-E-unsplash.jpg",
+            quote: "Turning ideas into apps!",
+            prize: "₹30,000",
+            registrationFee: "₹300",
+            instructions: [
+                "Solo or team participation (max 3 members).",
+                "The app must be developed during the competition.",
+                "Judging criteria include UI/UX, functionality, and originality.",
+                "Apps must be deployed and demonstrated at the end.",
+            ],
+            accentColor:"orange"
+        },
+    ];
+    
+
 gsap.registerPlugin(SplitText);
 
 function Comepetition() {
@@ -73,6 +141,7 @@ function Comepetition() {
     },
   ];
 
+ main
   const pageref = useRef();
   const sectionref = useRef([]);
   const cursorRef = useRef();
@@ -322,6 +391,51 @@ function Comepetition() {
         }}
       >
         {windowopen && windowinfo && (
+main
+            <div ref={windowref} className={`flex h-[70vh] w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg overflow-hidden z-50 backdrop-blur-lg`}>
+                <div className={`w-1/3`}>
+                    <div ref={targetImgRef} className={`w-full h-full`}>
+                        <img
+                            src={`${windowinfo.img}`} // Replace with your image path
+                            alt="Random Info"
+                            className={`w-[19vw] h-[26vw] bg-${windowinfo.accentColor}-400 hover:scale-125 rounded-xl transition duration-500 cursor-pointer ease-in-out overflow-hidden`}
+                        />
+                    </div>
+                </div>
+                <div className={`flex flex-col gap-4 text-white`}>
+                <h2 className={`text-[2.5vw] font-extrabold text-${windowinfo.accentColor}-400 uppercase`}>
+                    {windowinfo.name}
+                </h2>
+                <p className={`text-gray-300 text-lg leading-relaxed`}>
+                    Participate in this thrilling competition and stand a chance to win exciting prizes!
+                </p>
+
+                {/* Prize Money */}
+                <div className={`text-${windowinfo.accentColor}-400 text-xl font-semibold`}>
+                    🏆 Prize Money: <span className={`text-white`}>{windowinfo.prize}</span>
+                </div>
+
+                {/* Instructions */}
+                <ul className={`list-disc pl-5 text-gray-300 text-lg space-y-2`}>
+                    {windowinfo.instructions.map((instruction, index) => (
+                        <li key={index} className={`hover:text-${windowinfo.accentColor}-400 transition duration-300`}>
+                            {instruction}
+                        </li>
+                    ))}
+                </ul>
+
+                {/* Apply Button */}
+                <button
+                    className={`mt-4 px-6 py-2 text-lg font-bold text-white bg-${windowinfo.accentColor}-500 rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`} onClick={() => {setdisplayform(true)}}
+                >
+                    Apply Now
+                    
+                </button>
+               
+               
+
+               
+
           <div
             ref={windowref}
             className={`flex h-[70vh] w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg overflow-hidden z-50 backdrop-blur-lg`}
@@ -334,6 +448,7 @@ function Comepetition() {
                   className={`w-[19vw] h-[26vw] bg-${windowinfo.accentColor}-400 hover:scale-125 rounded-xl transition duration-500 cursor-pointer ease-in-out overflow-hidden`}
                 />
               </div>
+ main
             </div>
             <div className={`flex flex-col gap-4`}>
               <h2
@@ -373,9 +488,20 @@ function Comepetition() {
                 Apply Now
               </button>
             </div>
+main
+          
+            
+        )}
+       
+        {competitionInfo.map((e,index) => (
+
           </div>
         )}
         {competitionInfo.map((e, index) => (
+ 
+
+
+main
           <>
             <div
               ref={(el) => (sectionref.current[index] = el)}
@@ -405,9 +531,14 @@ function Comepetition() {
             </div>
           </>
         ))}
+        {displayform && (
+          <Popupform onClose={() => setdisplayform(false) } />
+        )}
       </div>
       <div className="w-full h-[50vh] flex justify-center items-center"></div>
     </div>
+    
+    
   );
 }
 
