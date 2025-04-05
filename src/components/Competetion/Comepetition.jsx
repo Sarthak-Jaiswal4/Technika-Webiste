@@ -6,10 +6,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Tilt from 'react-parallax-tilt';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText)
+import Popupform from "./Popupform";
 
 function Comepetition() {
     const [windowopen, setwindowopen] = useState(false)
     const [windowinfo, setwindowinfo] = useState({})
+    const[displayform,setdisplayform]=useState(false)
     const competitionInfo = [
         {
             name: "Code Sprint",
@@ -311,13 +313,21 @@ function Comepetition() {
 
                 {/* Apply Button */}
                 <button
-                    className={`mt-4 px-6 py-2 text-lg font-bold text-white bg-${windowinfo.accentColor}-500 rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`}
+                    className={`mt-4 px-6 py-2 text-lg font-bold text-white bg-${windowinfo.accentColor}-500 rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`} onClick={() => {setdisplayform(true)}}
                 >
                     Apply Now
+                    
                 </button>
+               
+               
+
+               
             </div>
             </div>
+          
+            
         )}
+       
         {competitionInfo.map((e,index) => (
           <>
             <div
@@ -345,10 +355,15 @@ function Comepetition() {
             </div>
           </>
         ))}
+        {displayform && (
+          <Popupform onClose={() => setdisplayform(false) } />
+        )}
       </div>
       <div className="w-full h-[50vh] flex justify-center items-center">
       </div>
     </div>
+    
+    
   );
 }
 
