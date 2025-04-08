@@ -3,7 +3,6 @@ import "../App.css";
 import { gsap } from "gsap";
 import SplitType from "split-type"
 import TeamMember from "../components/Team Page/TeamMember";
-gsap.registerPlugin(SplitText)
 
 function Team_Page() {
   const headingref = useRef();
