@@ -232,11 +232,11 @@ function Comepetition() {
           start: "top top",
           end: `+=${window.innerHeight * (length - 1)}`,
           pin: true,
-          scrub: 0.5,
+          scrub: true,
           snap: {
             snapTo: 1 / (length - 1), // Snaps to each section
             ease: "power1.inOut",
-            duration: { min: 0.2, max: 0.4 }, // Control snap animation duration
+            duration: { min: 0.2, max: 0.3 }, // Control snap animation duration
             delay: 0,
           },
           // markers:true,
@@ -283,7 +283,7 @@ function Comepetition() {
           {
             y: "0%",
             opacity: 1,
-            duration: 0.5,
+            duration: 0.4,
           },
           i
         );
@@ -300,21 +300,20 @@ function Comepetition() {
   );
 
   return (
-    <div className="w-full h-full text-black bg-gray-900 font-[main-font] main-color relative">
-      <div
-        ref={cursorRef}
-        className="fixed top-0 left-0 w-24 h-24 bg-gray-600 rounded-full flex justify-center items-center text-white text-sm font-semibold pointer-events-none opacity-0 scale-0 z-50" // Style the cursor
-        style={{ opacity: 0, scale: 0 }} // Initial GSAP state (redundant but safe)
-      >
-        View More
-      </div>
-      <div className="w-full h-screen font-[team-font] text-white flex justify-center items-center bg-blur">
-        <h1 className="text-[4.5vw] font-black">Competetions</h1>
-      </div>
+    <div className="w-full h-full text-black bg-gray-900 font-[main-font] relative">
+      {window.innerWidth >= 768 && (
+        <div
+          ref={cursorRef}
+          className="fixed top-0 left-0 w-24 h-24 bg-gray-600 rounded-full flex justify-center items-center text-white text-sm font-semibold pointer-events-none opacity-0 scale-0 z-50" // Style the cursor
+          style={{ opacity: 0, scale: 0 }} // Initial GSAP state (redundant but safe)
+        >
+          View More
+        </div>
+      )}
       <NavBar Page={'Events'}/>
       <div
         ref={pageref}
-        className="w-full h-screen flex flex-col justify-center items-center px-40 bg-blur gap-40 relative"
+        className="w-full h-screen flex flex-col justify-center items-center md:px-40 px-4 bg-blur gap-40 relative"
         style={{
           backgroundImage: `url('/2cbc84d3-7541-40fa-99a9-69234be52e94.jpg')`,
           backgroundSize: "cover",
@@ -324,38 +323,38 @@ function Comepetition() {
         {windowopen && windowinfo && (
           <div
             ref={windowref}
-            className={`flex h-[70vh] w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg overflow-hidden z-50 backdrop-blur-lg`}
+            className={`flex flex-col md:flex-row h-[75%] md:h-[70vh] w-[90%] md:w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg z-50 p-4 overflow-scroll`}
           >
-            <div className={`w-1/3`}>
+            <div className={`w-full md:w-1/3`}>
               <div ref={targetImgRef} className={`w-full h-full`}>
                 <img
                   src={`${windowinfo.img}`} // Replace with your image path
                   alt="Random Info"
-                  className={`w-[19vw] h-[26vw] bg-${windowinfo.accentColor}-400 hover:scale-125 rounded-xl transition duration-500 cursor-pointer ease-in-out overflow-hidden`}
+                  className={`w-full h-auto bg-${windowinfo.accentColor}-400 hover:scale-125 rounded-xl transition duration-500 cursor-pointer ease-in-out overflow-hidden py-4`}
                 />
               </div>
             </div>
-            <div className={`flex flex-col gap-4`}>
+            <div className={`flex flex-col gap-4 w-full md:w-2/3`}>
               <h2
-                className={`text-[2.5vw] font-extrabold ${windowinfo.accentColor} uppercase`}
+                className={`text-xl md:text-[2.5vw] font-extrabold ${windowinfo.accentColor} uppercase`}
               >
                 {windowinfo.name}
               </h2>
-              <p className={`text-gray-300 text-lg leading-relaxed`}>
+              <p className={`text-gray-300 text-base md:text-lg leading-relaxed`}>
                 Participate in this thrilling competition and stand a chance to
                 win exciting prizes!
               </p>
 
               {/* Prize Money */}
               <div
-                className={`${windowinfo.accentColor} text-xl font-semibold`}
+                className={`${windowinfo.accentColor} text-lg md:text-xl font-semibold`}
               >
                 🏆 Prize Money:{" "}
                 <span className={`text-white`}>{windowinfo.prize}</span>
               </div>
 
               {/* Instructions */}
-              <ul className={`list-disc pl-5 text-gray-300 text-lg space-y-2`}>
+              <ul className={`list-disc pl-5 text-gray-300 text-base md:text-lg space-y-2`}>
                 {windowinfo.instructions.map((instruction, index) => (
                   <li
                     key={index}
@@ -368,7 +367,7 @@ function Comepetition() {
 
               {/* Apply Button */}
               <button
-                className={`mt-4 px-6 py-2 text-white text-lg font-bold ${windowinfo.bgColor} rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`}
+                className={`mt-4 px-4 md:px-6 py-2 text-white text-base md:text-lg font-bold ${windowinfo.bgColor} rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`}
               >
                 Apply Now
               </button>
@@ -380,9 +379,9 @@ function Comepetition() {
             <div
               ref={(el) => (sectionref.current[index] = el)}
               key={index}
-              className="w-full h-full flex justify-center items-center gap-20 absolute card overflow-hidden"
+              className="w-full h-full flex flex-col md:flex-row justify-center items-center gap-4 absolute card overflow-hidden md:top-0 -top-5"
             >
-              <h1 className="text-white text-[4vw] w-[30%] font-black flex flex-col justify-center items-center text-center leading-normal gap-3 sm:leading-[65px]">
+              <h1 className="text-white text-5xl lg:text-[4vw] w-full md:w-[30%] font-black flex flex-col justify-center items-center text-center leading-10 gap-3 sm:leading-[65px] md:py-0 py-4 overflow-hidden">
                 {e.name}
               </h1>
               <Tilt>
@@ -395,11 +394,11 @@ function Comepetition() {
                     windowOpening(e.currentTarget);
                     searchImageForWindow(e.currentTarget);
                   }}
-                  className="w-[20vw] h-[25vw] bg-orange-400 hover:scale-125 rounded-2xl transition duration-500 cursor-pointer ease-in-out overflow-hidden"
+                  className="w-[100%] md:w-[20vw] md:h-[30vw] h-[100vw] bg-orange-400 hover:scale-125 rounded-2xl transition duration-500 cursor-pointer ease-in-out overflow-hidden flex justify-center items-center"
                   alt=""
                 />
               </Tilt>
-              <h1 className="text-white sm:text-[4vw] w-[30%] font-black flex flex-col justify-center items-center text-center leading-normal sm:leading-[65px]">
+              <h1 className="text-white text-5xl lg:text-[4vw] w-full md:w-[30%] font-black flex flex-col justify-center items-center text-center leading-12 sm:leading-[65px]">
                 {e.quote}
               </h1>
             </div>

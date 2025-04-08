@@ -38,7 +38,7 @@ function NavBar({Page}) {
         { to: "/about", label: "About", icon: "/annie-spratt-sggw4-qDD54-unsplash.jpeg" },
         { to: "/competetion", label: "Competition", icon: "/jason-mavrommatis-XYrjl3j7smo-unsplash.jpeg" }, // Corrected spelling
         { to: "/gallery", label: "Gallery", icon: "/zalfa-imani-1xp5VxvyKL0-unsplash.jpeg" },
-        { to: "/team", label: "Team", icon: "/zalfa-imani-1xp5VxvyKL0-unsplash.jpeg" },
+        { to: "/team", label: "Team", icon: "/austin-distel-mpN7xjKQ_Ns-unsplash.jpeg" },
     ];
 
   return (

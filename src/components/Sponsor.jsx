@@ -24,7 +24,7 @@ function Sponsor() {
         <img src={index} alt={`Sponsor Logo ${index}`} className="lg:h-36 h-[14vw] w-[14vw] object-contain  lg:w-36 rounded-full bg-white" />
     ))}
     </div>
-      <h1 className="lg:text-[12rem] text-7xl font-semibold mb-4 font-[main-font]">Our Sponsors</h1>
+      <h1 className="lg:text-[12rem] text-7xl font-semibold mb-4 font-[main-font]">Sponsors</h1>
       {/* <p className="text-lg mb-8">We are grateful for the support of our sponsors who make this event possible.</p> */}
       <div className="flex w-full pt-16 lg:pt-[4vw] mb-4 justify-between">
       {indianTechSponsorLogos1.map((index)=>(

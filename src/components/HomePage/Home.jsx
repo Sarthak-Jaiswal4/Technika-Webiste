@@ -30,7 +30,7 @@ function Home() {
             end: "bottom 80%",
             toggleActions: "play none none reverse",
             scrub: true,
-            markers: true, // Uncomment for debugging positions
+            // markers: true, // Uncomment for debugging positions
           },
           y: window.innerHeight / 3, // Move down
           width: "200%", // Increase width (adjust as needed)
