@@ -112,7 +112,7 @@ function Comepetition() {
   // --- Effect: Custom Cursor Follow ---
   useEffect(() => {
     const cursorEl = cursorRef.current;
-    if (!cursorEl || window.innerWidth < 1024) return; // Only run on laptop view
+    if (!cursorEl || window.innerWidth >= 1024) return; // Only run on laptop view
 
     const moveCursor = (e) => {
       gsap.to(cursorEl, {
@@ -133,7 +133,7 @@ function Comepetition() {
   useEffect(() => {
     const cursorEl = cursorRef.current;
     const containerEl = pageref.current;
-    if (!cursorEl || !containerEl || window.innerWidth < 1024) return; // Only run on laptop view
+    if (!cursorEl || !containerEl || window.innerWidth >= 1024) return; // Only run on laptop view
 
     if (isHoveringCard) {
       gsap.to(cursorEl, {
