@@ -10,6 +10,7 @@ import AccordionSlider from "../Event_section";
 import Footer from "../Footer";
 import FlagshipEvent from "../FlagshipEvent";
 import NavBar from "../NavBar";
+import Header from "../Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,6 +80,7 @@ function Home() {
         ></div>
         {/* Expandable Menu */}
         <NavBar Page={"Home"}/>
+        <Header/>
         {/* Hero Section */}
         <div className="relative flex flex-col w-full h-auto">
           {" "}

@@ -5,6 +5,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import SplitType from "split-type";
 import NavBar from '../NavBar'
+import Header from '../Header'
 gsap.registerPlugin(ScrollTrigger);
 
 function Comepetition() {
@@ -18,10 +19,10 @@ function Comepetition() {
       prize: "₹25,000",
       registrationFee: "₹200",
       instructions: [
-        "Each team can have up to 3 members.",
-        "You will be given a problem statement at the start.",
-        "You must submit your solution within the given time limit.",
-        "Use of AI tools is not allowed.",
+       "Problem statements will be provided on the spot.",
+        "Teams must read and understand the problem statement during prep time.",
+        "Teams must create a PowerPoint (PPT) presentation within the time frame.",
+        "Teams must pitch their PPT to the judges within their time slot."
       ],
       bgColor: "bg-yellow-300",
       accentColor: "text-yellow-200",
@@ -33,10 +34,9 @@ function Comepetition() {
       prize: "₹50,000",
       registrationFee: "₹500",
       instructions: [
-        "Maximum team size: 4 members.",
-        "Projects must be developed during the event.",
-        "Judging criteria include innovation, feasibility, and presentation.",
-        "You must present a working prototype.",
+        "Teams must set up devices and ensure stable internet before the event.",
+        "Problem statements will be provided on the spot.",
+        "The event has 4 rounds:"
       ],
       bgColor: "bg-green-800",
       accentColor: "text-green-700",
@@ -48,10 +48,11 @@ function Comepetition() {
       prize: "₹10,000",
       registrationFee: "₹100",
       instructions: [
-        "Individual or team participation (max 2 per team).",
-        "The quiz will have 3 rounds: MCQs, rapid-fire, and buzzer round.",
-        "Negative marking is applicable.",
-        "Use of mobile phones is strictly prohibited.",
+        "Problem statement will be revealed on the spot.",
+        "Teams must bring one laptop and stable internet.",
+        "Problems must be solved within the allotted time.",
+        "Three stages increasing in difficulty with eliminations after each.",
+        "Basic coding knowledge is required."
       ],
       bgColor: "bg-sky-500",
       accentColor: "text-sky-400",
@@ -111,7 +112,7 @@ function Comepetition() {
   // --- Effect: Custom Cursor Follow ---
   useEffect(() => {
     const cursorEl = cursorRef.current;
-    if (!cursorEl) return;
+    if (!cursorEl || window.innerWidth < 1024) return; // Only run on laptop view
 
     const moveCursor = (e) => {
       gsap.to(cursorEl, {
@@ -132,7 +133,7 @@ function Comepetition() {
   useEffect(() => {
     const cursorEl = cursorRef.current;
     const containerEl = pageref.current;
-    if (!cursorEl || !containerEl) return;
+    if (!cursorEl || !containerEl || window.innerWidth < 1024) return; // Only run on laptop view
 
     if (isHoveringCard) {
       gsap.to(cursorEl, {
@@ -311,6 +312,7 @@ function Comepetition() {
         </div>
       )}
       <NavBar Page={'Events'}/>
+      <Header/>
       <div
         ref={pageref}
         className="w-full h-screen flex flex-col justify-center items-center md:px-40 px-4 bg-blur gap-40 relative"
@@ -323,9 +325,9 @@ function Comepetition() {
         {windowopen && windowinfo && (
           <div
             ref={windowref}
-            className={`flex flex-col md:flex-row h-[75%] md:h-[70vh] w-[90%] md:w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg z-50 p-4 overflow-scroll`}
+            className={`flex flex-col gap-8 md:flex-row h-[75%] md:h-[70vh] w-[90%] md:w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg z-50 p-4 lg:overflow-hidden overflow-scroll`}
           >
-            <div className={`w-full md:w-1/3`}>
+            <div className={`w-full md:w-1/3 p-6`}>
               <div ref={targetImgRef} className={`w-full h-full`}>
                 <img
                   src={`${windowinfo.img}`} // Replace with your image path
@@ -381,7 +383,7 @@ function Comepetition() {
               key={index}
               className="w-full h-full flex flex-col md:flex-row justify-center items-center gap-4 absolute card overflow-hidden md:top-0 -top-5"
             >
-              <h1 className="text-white text-5xl lg:text-[4vw] w-full md:w-[30%] font-black flex flex-col justify-center items-center text-center leading-10 gap-3 sm:leading-[65px] md:py-0 py-4 overflow-hidden">
+              <h1 className="text-white text-4xl lg:text-[4vw] w-full md:w-[30%] font-black flex flex-col justify-center items-center text-center leading-10 gap-3 sm:leading-[65px] md:py-0 py-4 overflow-hidden">
                 {e.name}
               </h1>
               <Tilt>
@@ -394,11 +396,11 @@ function Comepetition() {
                     windowOpening(e.currentTarget);
                     searchImageForWindow(e.currentTarget);
                   }}
-                  className="w-[100%] md:w-[20vw] md:h-[30vw] h-[100vw] bg-orange-400 hover:scale-125 rounded-2xl transition duration-500 cursor-pointer ease-in-out overflow-hidden flex justify-center items-center"
+                  className="w-[100%] md:w-[20vw] md:h-[30vw] h-[100vw] bg-orange-400 lg:hover:scale-125 rounded-2xl transition duration-500 cursor-pointer ease-in-out overflow-hidden flex justify-center items-center"
                   alt=""
                 />
               </Tilt>
-              <h1 className="text-white text-5xl lg:text-[4vw] w-full md:w-[30%] font-black flex flex-col justify-center items-center text-center leading-12 sm:leading-[65px]">
+              <h1 className="text-white text-4xl lg:text-[4vw] w-full md:w-[30%] font-black flex flex-col justify-center items-center text-center leading-12 sm:leading-[65px]">
                 {e.quote}
               </h1>
             </div>

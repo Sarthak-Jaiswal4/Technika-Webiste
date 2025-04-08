@@ -78,13 +78,13 @@ function Footer() {
       <h1 ref={hashtagref} className="lg:text-8xl text-[12vw] font-semibold font-[main-font]">
         #TECHNIKA'25
       </h1>
-      <div className=' flex gap-[2vw] justify-center items-center'>
-        <CgMail className='w-[3vw] h-[3vw] hover:cursor-pointer'  onClick={handleMailClick}/>
-        <FaPhone className='w-[3vw] h-[3vw] hover:cursor-pointer' onClick={handlePhoneClick}/>
-        <BsYoutube className='w-[3vw] h-[3vw] hover:cursor-pointer' onClick={handleYoutubeClick} />
-        <FaInstagram className='w-[3vw] h-[3vw] hover:cursor-pointer' onClick={handleInstaClick} />
-        <FaLinkedin className='w-[3vw] h-[3vw] hover:cursor-pointer' onClick={handlelinkedClick} />
-        <FaThreads className='w-[3vw] h-[3vw] hover:cursor-pointer' onClick={handleThreadsClick}/>
+      <div className=' flex gap-[4vw] md:gap-[2vw] justify-center items-center'>
+        <CgMail className='md:w-[3vw] w-[9vw] h-[8vw] md:h-[3vw] hover:cursor-pointer'  onClick={handleMailClick}/>
+        <FaPhone className='md:w-[3vw] w-[9vw] h-[8vw] md:h-[3vw] hover:cursor-pointer' onClick={handlePhoneClick}/>
+        <BsYoutube className='md:w-[3vw] w-[9vw] h-[8vw] md:h-[3vw] hover:cursor-pointer' onClick={handleYoutubeClick} />
+        <FaInstagram className='md:w-[3vw] w-[9vw] h-[8vw] md:h-[3vw] hover:cursor-pointer' onClick={handleInstaClick} />
+        <FaLinkedin className='md:w-[3vw] w-[9vw] h-[8vw] md:h-[3vw] hover:cursor-pointer' onClick={handlelinkedClick} />
+        <FaThreads className='md:w-[3vw] w-[9vw] h-[8vw] md:h-[3vw] hover:cursor-pointer' onClick={handleThreadsClick}/>
         </div>
         <div className=''>
              © Technical Sub-Council , HBTU Kanpur | Privacy Policy
