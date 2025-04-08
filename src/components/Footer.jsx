@@ -1,6 +1,5 @@
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
-import SplitText from "gsap-trial/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import SplitType from "split-type";

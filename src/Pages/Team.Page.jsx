@@ -1,7 +1,7 @@
 import React, { useRef, useLayoutEffect } from "react";
 import "../App.css";
 import { gsap } from "gsap";
-import SplitText from "gsap-trial/SplitText";
+import SplitType from "split-type"
 import TeamMember from "../components/Team Page/TeamMember";
 gsap.registerPlugin(SplitText)
 
@@ -12,7 +12,7 @@ function Team_Page() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      let split =new SplitText(headingref.current, { type: "words" });
+      let split =new SplitType(headingref.current, { type: "words" });
       gsap.from(split.words, {
         opacity: 0,
         y: -50,
