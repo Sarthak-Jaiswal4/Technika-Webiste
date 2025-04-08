@@ -13,7 +13,7 @@ function Comepetition() {
   const competitionInfo = [
     {
       name: "Code Sprint",
-      img: "/clay-banks-0VfnZbQd98c-unsplash.jpg",
+      img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpg",
       quote: "Code fast, think faster!",
       prize: "₹25,000",
       registrationFee: "₹200",
@@ -28,7 +28,7 @@ function Comepetition() {
     },
     {
       name: "Hackathon",
-      img: "/c-f-photography-iV_oBbfZNmg-unsplash.jpg",
+      img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpg",
       quote: "Innovate, build, disrupt.",
       prize: "₹50,000",
       registrationFee: "₹500",
@@ -43,7 +43,7 @@ function Comepetition() {
     },
     {
       name: "Tech Quiz",
-      img: "/safar-safarov-koOdUvfGr4c-unsplash.jpg",
+      img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpg",
       quote: "Knowledge is power—prove it!",
       prize: "₹10,000",
       registrationFee: "₹100",
@@ -58,7 +58,7 @@ function Comepetition() {
     },
     {
       name: "App Development Challenge",
-      img: "/jason-leung-1DjbGRDh7-E-unsplash.jpg",
+      img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpg",
       quote: "Turning ideas into apps!",
       prize: "₹30,000",
       registrationFee: "₹300",
@@ -140,7 +140,6 @@ function Comepetition() {
     if (isHoveringCard) {
       // Animate custom cursor in
       gsap.to(cursorElement, {
-        opacity: 1,
         scale: 1,
         duration: 0.3,
         ease: "power1.out",
@@ -406,7 +405,6 @@ function Comepetition() {
           </>
         ))}
       </div>
-      <div className="w-full h-[50vh] flex justify-center items-center"></div>
     </div>
   );
 }
