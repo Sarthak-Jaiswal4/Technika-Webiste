@@ -43,7 +43,7 @@ function Footer() {
       ref={containerref}
       className="bg-black pt-40 text-white h-[70vh] flex flex-col items-center justify-between bg-blur"
     >
-      <h1 ref={hashtagref} className="text-9xl font-medium font-[main-font]">
+      <h1 ref={hashtagref} className="lg:text-9xl text-[12vw] font-medium font-[main-font]">
         #TECHNIKA'25
       </h1>
       <div className="flex space-x-4 mb-4">

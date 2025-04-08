@@ -1,9 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import SplitType from "split-type";
+import NavBar from '../NavBar'
 gsap.registerPlugin(ScrollTrigger);
 
 function Comepetition() {
@@ -22,7 +23,7 @@ function Comepetition() {
         "You must submit your solution within the given time limit.",
         "Use of AI tools is not allowed.",
       ],
-      bgColor:"bg-yellow-300",
+      bgColor: "bg-yellow-300",
       accentColor: "text-yellow-200",
     },
     {
@@ -37,7 +38,7 @@ function Comepetition() {
         "Judging criteria include innovation, feasibility, and presentation.",
         "You must present a working prototype.",
       ],
-      bgColor:"bg-green-800",
+      bgColor: "bg-green-800",
       accentColor: "text-green-700",
     },
     {
@@ -52,7 +53,7 @@ function Comepetition() {
         "Negative marking is applicable.",
         "Use of mobile phones is strictly prohibited.",
       ],
-      bgColor:"bg-sky-500",
+      bgColor: "bg-sky-500",
       accentColor: "text-sky-400",
     },
     {
@@ -67,7 +68,7 @@ function Comepetition() {
         "Judging criteria include UI/UX, functionality, and originality.",
         "Apps must be deployed and demonstrated at the end.",
       ],
-      bgColor:"bg-amber-500",
+      bgColor: "bg-amber-500",
       accentColor: "text-amber-400",
     },
   ];
@@ -79,90 +80,86 @@ function Comepetition() {
   const windowref = useRef(null);
   const [isHoveringCard, setIsHoveringCard] = useState(false);
 
-  const windowopenning = (e) => {
+  const windowOpening = useCallback((clickedEl) => {
     const targetImg = targetImgRef.current;
     if (!targetImg) return;
-    // Get the bounding rectangles for the clicked image and the target image
-    const clickedRect = e.getBoundingClientRect();
-    const targetRect = targetImg.getBoundingClientRect();
 
-    // Calculate the differences
+    const clickedRect = clickedEl.getBoundingClientRect();
+    const targetRect = targetImg.getBoundingClientRect();
     const deltaX = targetRect.left - clickedRect.left;
     const deltaY = targetRect.top - clickedRect.top;
 
-    // Animate the clicked image to move to the target position
-    gsap.to(e, {
+    gsap.to(clickedEl, {
       x: deltaX,
       y: deltaY,
       duration: 0.5,
       ease: "power2.in",
     });
-  };
+  }, []);
 
-  const SearchImageForWindow = (e) => {
-    const searchimg = e.src.split("http://localhost:5173")[1];
-    setwindowinfo(competitionInfo.find((e) => e.img == searchimg));
-  };
+  // --- Function: Search for competition info based on an image's src ---
+  const searchImageForWindow = useCallback(
+    (imageEl) => {
+      const src = imageEl.src;
+      const relativeSrc = src.replace("http://localhost:5173", "");
+      const info = competitionInfo.find((item) => item.img === relativeSrc);
+      setwindowinfo(info);
+    },
+    [competitionInfo, setwindowopen]
+  );
 
-  // --- Track Mouse Position and Update Custom Cursor ---
+  // --- Effect: Custom Cursor Follow ---
   useEffect(() => {
-    const cursorElement = cursorRef.current;
-    if (!cursorElement) return;
+    const cursorEl = cursorRef.current;
+    if (!cursorEl) return;
 
     const moveCursor = (e) => {
-      // Use GSAP to smoothly follow the mouse
-      gsap.to(cursorElement, {
+      gsap.to(cursorEl, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.1, // Small duration for smoothing, use 0 for instant
+        duration: 0.1,
         ease: "power1.out",
-        // To center the cursor on the pointer:
         xPercent: -50,
         yPercent: -50,
       });
     };
 
     window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, []);
 
-    // Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-    };
-  }, []); // Empty dependency array ensures this runs only once
-
-  // --- Effect to Show/Hide Custom Cursor based on Hover State ---
+  // --- Effect: Toggle Custom Cursor Visibility Based on Card Hover ---
   useEffect(() => {
-    const cursorElement = cursorRef.current;
-    const containerElement = pageref.current; // The element where default cursor needs hiding
-    if (!cursorElement || !containerElement) return;
+    const cursorEl = cursorRef.current;
+    const containerEl = pageref.current;
+    if (!cursorEl || !containerEl) return;
 
     if (isHoveringCard) {
-      // Animate custom cursor in
-      gsap.to(cursorElement, {
+      gsap.to(cursorEl, {
         scale: 1,
-        duration: 0.3,
-        ease: "power1.out",
         opacity: 0.8,
-      });
-      // Hide default cursor on the container
-      containerElement.style.cursor = "none";
-    } else {
-      // Animate custom cursor out
-      gsap.to(cursorElement, {
-        opacity: 0,
-        scale: 0,
         duration: 0.3,
         ease: "power1.out",
       });
-      // Restore default cursor on the container
-      containerElement.style.cursor = "auto";
+      containerEl.style.cursor = "none";
+    } else {
+      gsap.to(cursorEl, {
+        scale: 0,
+        opacity: 0,
+        duration: 0.3,
+        ease: "power1.out",
+      });
+      containerEl.style.cursor = "auto";
     }
   }, [isHoveringCard]);
 
+  // --- Effect: Animate Modal Window Opening ---
   useEffect(() => {
-    if (windowopen == true) {
-      const windowtimeline = gsap.timeline();
-      windowtimeline
+    if (!windowopen) return;
+    // Use a GSAP context for scoping animation
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline()
         .fromTo(
           windowref.current,
           { scaleX: 0, transformOrigin: "left", opacity: 0 },
@@ -173,46 +170,50 @@ function Comepetition() {
           { scaleX: 0, transformOrigin: "left", opacity: 0 },
           { scaleX: 1, opacity: 1, duration: 0.7, ease: "power3.out" }
         );
-    }
-  }, [windowopen, windowinfo]);
-
-  useEffect(() => {
-    if (windowopen) {
-      const handleClickOutside = (event) => {
-        if (windowref.current && !windowref.current.contains(event.target)) {
-          setwindowopen(false); // Close the modal
-        }
-      };
-
-      document.addEventListener("mousedown", handleClickOutside);
-
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }
+    });
+    return () => ctx.revert();
   }, [windowopen]);
 
-  const handleMouseEnterCard = (e) => {
-    setIsHoveringCard(true);
-    // Optional: Keep or remove the card scaling effect
-    gsap.to(e.currentTarget, {
-      scale: 1.2,
-      duration: 0.3,
-      ease: "power1.out",
-      overwrite: "auto",
-    });
-  };
+  // --- Effect: Close Modal if Clicked Outside ---
+  useEffect(() => {
+    if (!windowopen) return;
 
-  const handleMouseLeaveCard = (e) => {
-    setIsHoveringCard(false);
-    // Optional: Keep or remove the card scaling effect
-    gsap.to(e.currentTarget, {
-      scale: 1,
-      duration: 0.3,
-      ease: "power1.out",
-      overwrite: "auto",
-    });
-  };
+    const handleClickOutside = (e) => {
+      if (windowref.current && !windowref.current.contains(e.target)) {
+        setwindowopen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [windowopen, setwindowopen]);
+
+  // --- Callbacks: Card Hover Effects ---
+  const handleMouseEnterCard = useCallback(
+    (e) => {
+      setIsHoveringCard(true);
+      gsap.to(e.currentTarget, {
+        scale: 1.2,
+        duration: 0.3,
+        ease: "power1.out",
+        overwrite: "auto",
+      });
+    },
+    [setIsHoveringCard]
+  );
+
+  const handleMouseLeaveCard = useCallback(
+    (e) => {
+      setIsHoveringCard(false);
+      gsap.to(e.currentTarget, {
+        scale: 1,
+        duration: 0.3,
+        ease: "power1.out",
+        overwrite: "auto",
+      });
+    },
+    [setIsHoveringCard]
+  );
 
   useGSAP(
     () => {
@@ -299,7 +300,7 @@ function Comepetition() {
   );
 
   return (
-    <div className="w-full h-full bg-gray-900 font-[main-font] main-color ">
+    <div className="w-full h-full text-black bg-gray-900 font-[main-font] main-color relative">
       <div
         ref={cursorRef}
         className="fixed top-0 left-0 w-24 h-24 bg-gray-600 rounded-full flex justify-center items-center text-white text-sm font-semibold pointer-events-none opacity-0 scale-0 z-50" // Style the cursor
@@ -310,6 +311,7 @@ function Comepetition() {
       <div className="w-full h-screen font-[team-font] text-white flex justify-center items-center bg-blur">
         <h1 className="text-[4.5vw] font-black">Competetions</h1>
       </div>
+      <NavBar Page={'Events'}/>
       <div
         ref={pageref}
         className="w-full h-screen flex flex-col justify-center items-center px-40 bg-blur gap-40 relative"
@@ -390,8 +392,8 @@ function Comepetition() {
                   onMouseLeave={handleMouseLeaveCard}
                   onClick={(e) => {
                     setwindowopen(true);
-                    windowopenning(e.currentTarget);
-                    SearchImageForWindow(e.currentTarget);
+                    windowOpening(e.currentTarget);
+                    searchImageForWindow(e.currentTarget);
                   }}
                   className="w-[20vw] h-[25vw] bg-orange-400 hover:scale-125 rounded-2xl transition duration-500 cursor-pointer ease-in-out overflow-hidden"
                   alt=""

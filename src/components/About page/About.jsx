@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './About.module.css'
+import NavBar from '../NavBar'
 
 function About() {
   return (
@@ -9,6 +10,7 @@ function About() {
       backgroundSize: "cover",
       backgroundPosition: "center",
   }}>
+    <NavBar Page={'About'} />
     <div className='' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       {/* <Image src={'/images/techart.jpg'} width={4160} height={2773} alt='technika23' className={styles.techart}></Image> */}
       <h1>ABOUT US</h1>

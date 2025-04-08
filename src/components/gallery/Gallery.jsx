@@ -1,6 +1,7 @@
 import ReactLenis from 'lenis/react';
 import { Upload } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react'
+import NavBar from '../NavBar'
 
 function Gallery() {
     const [open, setopen] = useState(false)
@@ -8,21 +9,21 @@ function Gallery() {
     const [imginfo, setimginfo] = useState({})
     const [imgPreviews, setImgPreviews] = useState([])
     const teamImages = [
-        "/yeh-che-wei-xdirCDBJZFA-unsplash-min.jpg",
-        "/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpg",
-        "/praveen-gupta-ptf91j8SFiM-unsplash-min.jpg",
-        "/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpg",
-        "/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpg",
-        "/mak-flex-2P_tj31Zu3E-unsplash-min.jpg",
-        "/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpg",
-        "/jason-jarrach-KLe3WJbdK4o-unsplash-min.jpg",
-        "/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpg",
-        "/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpg",
-        "/yeh-che-wei-xdirCDBJZFA-unsplash-min.jpg",
-        "/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpg",
-        "/praveen-gupta-ptf91j8SFiM-unsplash-min.jpg",
-        "/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpg",
-        "/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpg",
+        "/yeh-che-wei-xdirCDBJZFA-unsplash-min.jpeg",
+        "/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpeg",
+        "/praveen-gupta-ptf91j8SFiM-unsplash-min.jpeg",
+        "/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpeg",
+        "/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpeg",
+        "/mak-flex-2P_tj31Zu3E-unsplash-min.jpeg",
+        "/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpeg",
+        "/jason-jarrach-KLe3WJbdK4o-unsplash-min.jpeg",
+        "/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpeg",
+        "/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpeg",
+        "/yeh-che-wei-xdirCDBJZFA-unsplash-min.jpeg",
+        "/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpeg",
+        "/praveen-gupta-ptf91j8SFiM-unsplash-min.jpeg",
+        "/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpeg",
+        "/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpeg",
         "/mak-flex-2P_tj31Zu3E-unsplash-min.jpg",
         "/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpg",
         "/jason-jarrach-KLe3WJbdK4o-unsplash-min.jpg",
@@ -39,11 +40,9 @@ function Gallery() {
     ];
     const windowref=useRef()
     const OpenClick=(img)=>{
-        console.log(img.src)
         setopen(true)
         const searchimg = img.src.split("http://localhost:5173")[1];
         const find=teamImages.find((e)=>e==searchimg)
-        console.log(find)
         setimginfo(find)
     }
 
@@ -75,6 +74,7 @@ function Gallery() {
                 backgroundPosition: "center",
             }}
         >
+            <NavBar Page={"Gallery"}/>
             {open && imginfo && (
                 <div className='fixed top-0 left-0 h-screen w-full flex justify-center items-center backdrop-blur-md z-50'>
                     <img ref={windowref} src={`${imginfo}`} alt="" loading='lazy' className='max-h-[70vh] max-w-full object-contain rounded-2xl bg-gray-800' />

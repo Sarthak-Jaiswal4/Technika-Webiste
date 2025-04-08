@@ -1,4 +1,5 @@
 import React from 'react'
+import NavBar from '../NavBar';
 
 function Team() {
     const departmentOrder = [
@@ -29,6 +30,7 @@ function Team() {
     
       return (
         <div className={style.main}>
+          <NavBar Page={Team}/>
           <div className={style.top}>team</div>
           <div className={style.bottom}>
             {loading ? (

@@ -3,7 +3,7 @@ import React from 'react'
 function FlagshipEvent() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-        <h1 className='font-[main-font] text-9xl py-20 text-center w-full font-bold'>Flagship Event</h1>
+        <h1 className='font-[main-font] text-7xl md:text-9xl py-20 text-center w-full font-bold'>Flagship Event</h1>
     {/* Main Event Hero Section */}
     <div className="flex flex-col h-full md:flex-row font-[main-font]">
       <div 
