@@ -3,15 +3,15 @@ import React, { useRef } from "react";
 import SplitText from "gsap-trial/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
 
 function Footer() {
   const hashtagref = useRef();
   const containerref = useRef();
 
   useGSAP(() => {
-    const infoSplit = new SplitText(hashtagref.current, { type: "chars" });
+    const infoSplit = new SplitType(hashtagref.current, { type: "chars" });
 
     gsap.fromTo(
       infoSplit.chars,
@@ -37,13 +37,14 @@ function Footer() {
         // repeat:-1
       }
     );
+    return () => infoSplit.revert();
   });
   return (
     <div
       ref={containerref}
       className="bg-black pt-40 text-white h-[70vh] flex flex-col items-center justify-between bg-blur"
     >
-      <h1 ref={hashtagref} className="text-9xl">
+      <h1 ref={hashtagref} className="text-9xl font-medium font-[main-font]">
         #TECHNIKA'25
       </h1>
       <div className="flex space-x-4 mb-4">

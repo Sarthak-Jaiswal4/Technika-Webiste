@@ -4,8 +4,8 @@ import SplitText from "gsap-trial/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef, useState } from "react";
 import Tilt from "react-parallax-tilt";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
 
 function Comepetition() {
   const [windowopen, setwindowopen] = useState(false);
@@ -13,7 +13,7 @@ function Comepetition() {
   const competitionInfo = [
     {
       name: "Code Sprint",
-      img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpg",
+      img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpeg",
       quote: "Code fast, think faster!",
       prize: "₹25,000",
       registrationFee: "₹200",
@@ -28,7 +28,7 @@ function Comepetition() {
     },
     {
       name: "Hackathon",
-      img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpg",
+      img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpeg",
       quote: "Innovate, build, disrupt.",
       prize: "₹50,000",
       registrationFee: "₹500",
@@ -43,7 +43,7 @@ function Comepetition() {
     },
     {
       name: "Tech Quiz",
-      img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpg",
+      img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpeg",
       quote: "Knowledge is power—prove it!",
       prize: "₹10,000",
       registrationFee: "₹100",
@@ -58,7 +58,7 @@ function Comepetition() {
     },
     {
       name: "App Development Challenge",
-      img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpg",
+      img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpeg",
       quote: "Turning ideas into apps!",
       prize: "₹30,000",
       registrationFee: "₹300",
@@ -261,8 +261,8 @@ function Comepetition() {
         const nameElement = prevheading;
         const infoElement = previnfo;
         if (nameElement) {
-          const infoSplit = new SplitText(infoElement, { type: "lines" });
-          const nameSplit = new SplitText(nameElement, { type: "lines" });
+          const infoSplit = new SplitType(infoElement, { type: "lines" });
+          const nameSplit = new SplitType(nameElement, { type: "lines" });
 
           splitInstances.push(nameSplit, infoSplit); // Store for cleanup
 

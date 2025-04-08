@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useCallback } from "react";
 const panels = [
-    { name: "Code Sprint", img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpg" },
-    { name: "Hackathon", img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpg" },
-    { name: "Tech Quiz", img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpg" },
-    { name: "App Development Challenge", img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpg" },
+    { name: "Code Sprint", img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpeg" },
+    { name: "Hackathon", img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpeg" },
+    { name: "Tech Quiz", img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpeg" },
+    { name: "App Development Challenge", img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpeg" },
   ];
 
 const AccordionSlider = () => {
@@ -41,9 +41,9 @@ const AccordionSlider = () => {
     )
 
       return (
-        <div className="flex h-screen w-full flex-col gap-20 main-color">
+        <div className="flex h-screen w-full flex-col gap-20">
             <div className="h-full w-full bg-blur flex gap-20 flex-col">
-                <h1 className="text-white text-bold text-9xl text-center ">Events</h1>
+                <h1 className="text-white font-bold text-9xl text-center font-[main-font]">Events</h1>
                 <div className="w-full h-full flex justify-center">
                     {panels.map((image, index) => (
                         <div
@@ -57,7 +57,7 @@ const AccordionSlider = () => {
                             alt={`Panel ${index + 1}`}
                             className="w-full h-full flex object-cover overflow-hidden aspect-2/3" // Changed h-full to h-auto to maintain aspect ratio
                         />
-                        <div className={`absolute bottom-2 left-2 text-white font-bold ${index == activeIndex ? 'text-4xl' : 'hidden'} px-2 py-1 rounded`}>
+                        <div className={`absolute bottom-4 left-4 font-[main-font] text-white font-medium ${index == activeIndex ? 'text-8xl' : 'hidden'} px-2 py-1 rounded`}>
                             {image.name}
                         </div>
                         </div>

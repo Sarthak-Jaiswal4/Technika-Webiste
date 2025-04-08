@@ -21,14 +21,6 @@ function Glimpse_Home() {
         // markers: true, // remove markers in production
       },
     });
-    gsap.to(containerRef.current, {
-        backgroundColor: "#210831", // Change background color to purple
-        scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top bottom",
-            // markers: true,
-        }
-    });
     const images = imagesRef.current;
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -79,7 +71,7 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[1] = el)}
           data-speed="1.5"
-          src={`/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpg`}
+          src={`/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpeg`}
           alt="Image 2"
           className="absolute rounded-4xl"
           style={{
@@ -92,7 +84,7 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[2] = el)}
           data-speed="0.8"
-          src={`/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpg`}
+          src={`/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpeg`}
           alt="Image 3"
           className="absolute rounded-4xl"
           style={{
@@ -105,7 +97,7 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[3] = el)}
           data-speed="1.2"
-          src={`/jannes-jacobs-Vl0NVX9iKo0-unsplash-min.jpg`}
+          src={`/jannes-jacobs-Vl0NVX9iKo0-unsplash-min.jpeg`}
           alt="Image 4"
           className="absolute rounded-4xl"
           style={{
@@ -118,7 +110,7 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[4] = el)}
           data-speed="1.7"
-          src={`/jason-jarrach-KLe3WJbdK4o-unsplash-min.jpg`}
+          src={`/jason-jarrach-KLe3WJbdK4o-unsplash-min.jpeg`}
           alt="Image 4"
           className="absolute rounded-4xl"
           style={{
@@ -131,7 +123,7 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[5] = el)}
           data-speed="1.1"
-          src={`/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpg`}
+          src={`/jordan-madrid-yTdb-7MoyvM-unsplash-min.jpeg`}
           alt="Image 4"
           className="absolute rounded-4xl"
           style={{
