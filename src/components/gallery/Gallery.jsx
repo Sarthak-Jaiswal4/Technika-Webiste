@@ -118,10 +118,10 @@ function Gallery() {
                     <img src={e} alt="" onClick={(e)=>OpenClick(e.currentTarget)} loading='lazy' className='m-2 py-2 rounded-xl cursor-pointer' />
                 ))}
             </div>
-            <div className='w-[18vw] h-[6vh] fixed bottom-0 z-[90] right-0 m-3 rounded-2xl '>
-                <div className='w-full h-full flex justify-center items-center gap-4 backdrop-blur-lg rounded-2xl cursor-pointer' onClick={OpenUpload}>
+            <div className='lg:w-[14vw] h-[6vh] fixed top-2 z-[90] right-4 m-3 rounded-2xl '>
+                <div className='w-full h-full flex justify-center items-center gap-4 backdrop-blur-lg rounded-2xl cursor-pointer p-2' onClick={OpenUpload}>
                     <Upload />
-                    <h1 className='text-[1.3vw]'>Uplaod Your Memories</h1>
+                    <h1 className='text-[4vw] lg:text-[1vw]'>Uplaod Your Memories</h1>
                 </div>
             </div>
         </div>

@@ -102,6 +102,7 @@ function Comepetition() {
   const searchImageForWindow = useCallback(
     (imageEl) => {
       const src = imageEl.src;
+      console.log(src)
       const relativeSrc = src.replace("http://localhost:5173", "");
       const info = competitionInfo.find((item) => item.img === relativeSrc);
       console.log(info)
