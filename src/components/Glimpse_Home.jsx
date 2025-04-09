@@ -58,12 +58,12 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[0] = el)}
           data-speed="0.5"
-          src={`/mariola-grobelska-gxcukNe9tKs-unsplash-min.jpeg`}
+          src={`/glipmse-1.jpg`}
           alt="Image 1"
-          className="absolute rounded-4xl md:w-[13%] w-[30vw]"
+          className="absolute rounded-4xl md:w-[20%] w-[35vw]"
           style={{
             top: '20vh', // Specific top position
-            left: '10vw', // Specific left position
+            left: '6vw', // Specific left position
             // width: '12.5%', // Adjusted width to maintain aspect ratio
             opacity: 1,
           }}
@@ -71,9 +71,9 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[1] = el)}
           data-speed="1.5"
-          src={`/piyanshu-sharma-j0PS3YTrZkU-unsplash-min.jpeg`}
+          src={`/glipmse-2.jpg`}
           alt="Image 2"
-          className="absolute rounded-4xl md:w-[13%] w-[35vw]"
+          className="absolute rounded-4xl md:w-[17%] w-[38vw]"
           style={{
             top: '70vh', // Specific top position
             left: '30vw', // Specific left position
@@ -84,7 +84,7 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[2] = el)}
           data-speed="0.8"
-          src={`/real_-jansen-LpnZ4I1TIKs-unsplash-min.jpeg`}
+          src={`/glipmse-3.jpg`}
           alt="Image 3"
           className="absolute rounded-4xl md:w-[21%] w-[45vw]"
           style={{
@@ -97,9 +97,9 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[3] = el)}
           data-speed="1.2"
-          src={`/jannes-jacobs-Vl0NVX9iKo0-unsplash-min.jpeg`}
+          src={`/glipmse-4.jpg`}
           alt="Image 4"
-          className="absolute rounded-4xl md:w-[13%] w-[30vw]"
+          className="absolute rounded-4xl md:w-[20%] w-[20vw]"
           style={{
             top: '150vh', // Specific top position
             left: '80vw', // Specific left position
@@ -110,9 +110,9 @@ function Glimpse_Home() {
         <img
           ref={(el) => (imagesRef.current[4] = el)}
           data-speed="1.7"
-          src={`/jason-jarrach-KLe3WJbdK4o-unsplash-min.jpeg`}
+          src={`/glipmse-5.jpg`}
           alt="Image 4"
-          className="absolute rounded-4xl md:w-[25%] w-[50vw]"
+          className="absolute rounded-4xl md:w-[30%] w-[50vw]"
           style={{
             top: '90vh', // Specific top position
             right: '65vw', // Specific left position

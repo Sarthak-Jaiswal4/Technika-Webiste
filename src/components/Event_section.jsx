@@ -2,13 +2,11 @@ import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useCallback } from "react";
 const panels = [
-  { name: "Code Sprint", img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpeg" },
-  { name: "Hackathon", img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpeg" },
-  { name: "Tech Quiz", img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpeg" },
-  {
-    name: "App Development Challenge",
-    img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpeg",
-  },
+  { name: "Robo sumo", img: "/Robosumo.jpg" },
+  { name: "Robo Race", img: "/glipmse-5.jpg" },
+  { name: "Techthon", img: "/Techathon.jpg" },
+  { name: "Hovermania",img: "/hovermania.jpeg"},
+  { name: "RC Nitro",img: "/RCNitro.jpeg"},
 ];
 
 const AccordionSlider = () => {
@@ -48,7 +46,7 @@ const AccordionSlider = () => {
     <div className="flex h-screen w-full flex-col gap-20">
       <div className="h-full w-full bg-blur flex gap-20 flex-col">
         <h1 className="text-white font-bold text-7xl md:text-9xl text-center font-[main-font]">
-          Events
+          Major Events
         </h1>
         <div className="w-full h-full flex justify-center">
           {panels.map((image, index) => (

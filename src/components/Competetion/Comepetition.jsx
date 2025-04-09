@@ -6,6 +6,7 @@ import Tilt from "react-parallax-tilt";
 import SplitType from "split-type";
 import NavBar from '../NavBar'
 import Header from '../Header'
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 function Comepetition() {
@@ -13,8 +14,8 @@ function Comepetition() {
   const [windowinfo, setwindowinfo] = useState({});
   const competitionInfo = [
     {
-      name: "Code Sprint",
-      img: "/clay-banks-0VfnZbQd98c-unsplash-min.jpeg",
+      name: "Robo Race",
+      img: "/glipmse-5.jpg",
       quote: "Code fast, think faster!",
       prize: "₹25,000",
       registrationFee: "₹200",
@@ -28,8 +29,8 @@ function Comepetition() {
       accentColor: "text-yellow-200",
     },
     {
-      name: "Hackathon",
-      img: "/c-f-photography-iV_oBbfZNmg-unsplash-min.jpeg",
+      name: "Robo Sumo",
+      img: "/Robosumo.jpg",
       quote: "Innovate, build, disrupt.",
       prize: "₹50,000",
       registrationFee: "₹500",
@@ -42,8 +43,8 @@ function Comepetition() {
       accentColor: "text-green-700",
     },
     {
-      name: "Tech Quiz",
-      img: "/safar-safarov-koOdUvfGr4c-unsplash-min.jpeg",
+      name: "Save The Egg",
+      img: "/savetheegg.jpg",
       quote: "Knowledge is power—prove it!",
       prize: "₹10,000",
       registrationFee: "₹100",
@@ -58,8 +59,83 @@ function Comepetition() {
       accentColor: "text-sky-400",
     },
     {
-      name: "App Development Challenge",
-      img: "/jason-leung-1DjbGRDh7-E-unsplash-min.jpeg",
+      name: "Project Exhibition",
+      img: "/exhibition.jpg",
+      quote: "Turning ideas into apps!",
+      prize: "₹30,000",
+      registrationFee: "₹300",
+      instructions: [
+        "Solo or team participation (max 3 members).",
+        "The app must be developed during the competition.",
+        "Judging criteria include UI/UX, functionality, and originality.",
+        "Apps must be deployed and demonstrated at the end.",
+      ],
+      bgColor: "bg-amber-500",
+      accentColor: "text-amber-400",
+    },
+    {
+      name: "Water Rocket",
+      img: "/WaterRocket.jpg",
+      quote: "Turning ideas into apps!",
+      prize: "₹30,000",
+      registrationFee: "₹300",
+      instructions: [
+        "Solo or team participation (max 3 members).",
+        "The app must be developed during the competition.",
+        "Judging criteria include UI/UX, functionality, and originality.",
+        "Apps must be deployed and demonstrated at the end.",
+      ],
+      bgColor: "bg-amber-500",
+      accentColor: "text-amber-400",
+    },
+    {
+      name: "Drone Competition",
+      img: "/Dronecomp.jpg",
+      quote: "Turning ideas into apps!",
+      prize: "₹30,000",
+      registrationFee: "₹300",
+      instructions: [
+        "Solo or team participation (max 3 members).",
+        "The app must be developed during the competition.",
+        "Judging criteria include UI/UX, functionality, and originality.",
+        "Apps must be deployed and demonstrated at the end.",
+      ],
+      bgColor: "bg-amber-500",
+      accentColor: "text-amber-400",
+    },
+    {
+      name: "Treasure Hunt",
+      img: "/treasurehunt.jpg",
+      quote: "Turning ideas into apps!",
+      prize: "₹30,000",
+      registrationFee: "₹300",
+      instructions: [
+        "Solo or team participation (max 3 members).",
+        "The app must be developed during the competition.",
+        "Judging criteria include UI/UX, functionality, and originality.",
+        "Apps must be deployed and demonstrated at the end.",
+      ],
+      bgColor: "bg-amber-500",
+      accentColor: "text-amber-400",
+    },
+    {
+      name: "Techthon",
+      img: "/Techathon.jpg",
+      quote: "Turning ideas into apps!",
+      prize: "₹30,000",
+      registrationFee: "₹300",
+      instructions: [
+        "Solo or team participation (max 3 members).",
+        "The app must be developed during the competition.",
+        "Judging criteria include UI/UX, functionality, and originality.",
+        "Apps must be deployed and demonstrated at the end.",
+      ],
+      bgColor: "bg-amber-500",
+      accentColor: "text-amber-400",
+    },
+    {
+      name: "Kya engineer bnega re tu",
+      img: "/meme.jpg",
       quote: "Turning ideas into apps!",
       prize: "₹30,000",
       registrationFee: "₹300",
@@ -102,9 +178,8 @@ function Comepetition() {
   const searchImageForWindow = useCallback(
     (imageEl) => {
       const src = imageEl.src;
-      console.log(src)
-      // const relativeSrc = src.replace("http://localhost:5173", "");
-      const relativeSrc = src.replace("https://technika-webiste.vercel.app", "");
+      const relativeSrc = src.replace("http://localhost:5173", "");
+      // const relativeSrc = src.replace("https://technika-webiste.vercel.app", "");
       const info = competitionInfo.find((item) => item.img === relativeSrc);
       console.log(info)
       setwindowinfo(info);
@@ -328,9 +403,9 @@ function Comepetition() {
         {windowopen && windowinfo && (
           <div
             ref={windowref}
-            className={`flex flex-col gap-8 md:flex-row h-[75%] md:h-[70vh] w-[90%] md:w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg z-50 p-4 lg:overflow-hidden overflow-scroll`}
+            className={`flex flex-col gap-8 md:flex-row h-[75%] md:h-[70vh] w-[90%] md:w-[65vw] justify-center items-center bg-gray-800 rounded-3xl shadow-lg z-50 lg:overflow-hidden overflow-scroll p-6`}
           >
-            <div className={`w-full md:w-1/3 p-6`}>
+            <div className={`w-full md:w-1/3 p-3`}>
               <div ref={targetImgRef} className={`w-full h-full`}>
                 <img
                   src={`${windowinfo.img}`} // Replace with your image path
@@ -371,11 +446,11 @@ function Comepetition() {
               </ul>
 
               {/* Apply Button */}
-              <button
-                className={`mt-4 px-4 md:px-6 py-2 text-white text-base md:text-lg font-bold ${windowinfo.bgColor} rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`}
+              <Link to={"https://forms.gle/Rpjr5cXz3STnTu577"}
+                className={`mt-4 px-4 md:px-6 py-2 text-white text-center text-base md:text-lg font-bold ${windowinfo.bgColor} rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`}
               >
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
         )}

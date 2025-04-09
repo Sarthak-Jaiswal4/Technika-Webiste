@@ -37,7 +37,7 @@ function About() {
       <h1>ASSOCIATED CLUBS</h1>
       <div className={styles.table}>
         <div className={styles.tablechild2}>
-          {/* <Image src={'/images/about/autorob.jpg'} width={640} height={640} alt='autorob'></Image> */}
+          <img src={'/autorob.jpg'} width={640} height={640} alt='autorob'></img>
           <h2>Autorob</h2>
           <p>
             This club mainly focus on automation and robotics engineering and  provides industrial automation solutions with a view to augmenting the production process.
@@ -45,7 +45,7 @@ function About() {
           </p>
         </div>
         <div className={styles.tablechild2}>
-        {/* <Image src={'/images/about/aeroclub.png'} width={640} height={640} alt='autorob'></Image> */}
+        <img src={'/aeroclub.png'} width={640} height={640} alt='autorob'></img>
 
           <h2>Aeroclub </h2>
           <p>
@@ -56,7 +56,7 @@ function About() {
           </p>
         </div>
         <div className={styles.tablechild2}>
-        {/* <Image src={'/images/about/photon.png'} width={640} height={640} alt='autorob'></Image> */}
+        <img src={'/photon.png'} width={640} height={640} alt='autorob'></img>
 
           <h2>Photon</h2>
           <p>
