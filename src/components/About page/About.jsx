@@ -18,7 +18,7 @@ function About() {
       <h1>ABOUT US</h1>
       <div className={styles.table}>
         <div className={styles.tablechild}>
-          <h2>VISION</h2>
+          <h2 className='text-5xl font-bold pb-4'>VISION</h2>
           <p>
             We envision fostering a dynamic and innovative community that thrives on pushing the boundaries of technology and empowers students to innovate fearlessly .
             We are committed to provide resources, mentorship, and opportunities for skill development, ensuring our members stay at the forefront of technological advancements.
@@ -26,7 +26,7 @@ function About() {
         </div>
         <div className={styles.tablechild}>
 
-          <h2>MISSION</h2>
+          <h2 className='text-5xl font-bold pb-4'>MISSION</h2>
           <p>To facilitate hands-on workshops, seminars, and training sessions to enhance technical skills.
             To provide networking opportunities among like-minded individuals.
             To provide resources and support for self-paced learning.
@@ -38,7 +38,7 @@ function About() {
       <div className={styles.table}>
         <div className={styles.tablechild2}>
           <img src={'/autorob.jpg'} width={640} height={640} alt='autorob'></img>
-          <h2>Autorob</h2>
+          <h2 className='text-3xl font-bold pb-4'>Autorob</h2>
           <p>
             This club mainly focus on automation and robotics engineering and  provides industrial automation solutions with a view to augmenting the production process.
 
@@ -47,7 +47,7 @@ function About() {
         <div className={styles.tablechild2}>
         <img src={'/aeroclub.png'} width={640} height={640} alt='autorob'></img>
 
-          <h2>Aeroclub </h2>
+          <h2 className='text-3xl font-bold pb-4'>Aeroclub </h2>
           <p>
             The activities here ranges from designing and fabrication to flying small air vehicles including the drones, RC planes.
             It provides the skill development in the aerodynamics, and explores into the world of aviation.
@@ -58,7 +58,7 @@ function About() {
         <div className={styles.tablechild2}>
         <img src={'/photon.png'} width={640} height={640} alt='autorob'></img>
 
-          <h2>Photon</h2>
+          <h2 className='text-3xl font-bold pb-4'>Photon</h2>
           <p>
             The functioning of this club mainly focus in various activities such as graphic designing, UI/UX, video editing, photo editing.
             They conduct various workshop and competitions to provide students a platform to apply and show their skills .

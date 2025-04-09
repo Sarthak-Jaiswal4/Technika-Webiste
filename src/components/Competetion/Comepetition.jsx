@@ -17,7 +17,6 @@ function Comepetition() {
       name: "Robo Race",
       img: "/glipmse-5.jpg",
       quote: "Code fast, think faster!",
-      prize: "₹25,000",
       registrationFee: "₹200",
       instructions: [
        "Problem statements will be provided on the spot.",
@@ -32,7 +31,6 @@ function Comepetition() {
       name: "Robo Sumo",
       img: "/Robosumo.jpg",
       quote: "Innovate, build, disrupt.",
-      prize: "₹50,000",
       registrationFee: "₹500",
       instructions: [
         "Teams must set up devices and ensure stable internet before the event.",
@@ -46,7 +44,6 @@ function Comepetition() {
       name: "Save The Egg",
       img: "/savetheegg.jpg",
       quote: "Knowledge is power—prove it!",
-      prize: "₹10,000",
       registrationFee: "₹100",
       instructions: [
         "Problem statement will be revealed on the spot.",
@@ -62,7 +59,6 @@ function Comepetition() {
       name: "Project Exhibition",
       img: "/exhibition.jpg",
       quote: "Turning ideas into apps!",
-      prize: "₹30,000",
       registrationFee: "₹300",
       instructions: [
         "Solo or team participation (max 3 members).",
@@ -77,7 +73,6 @@ function Comepetition() {
       name: "Water Rocket",
       img: "/WaterRocket.jpg",
       quote: "Turning ideas into apps!",
-      prize: "₹30,000",
       registrationFee: "₹300",
       instructions: [
         "Solo or team participation (max 3 members).",
@@ -92,7 +87,6 @@ function Comepetition() {
       name: "Drone Competition",
       img: "/Dronecomp.jpg",
       quote: "Turning ideas into apps!",
-      prize: "₹30,000",
       registrationFee: "₹300",
       instructions: [
         "Solo or team participation (max 3 members).",
@@ -107,7 +101,6 @@ function Comepetition() {
       name: "Treasure Hunt",
       img: "/treasurehunt.jpg",
       quote: "Turning ideas into apps!",
-      prize: "₹30,000",
       registrationFee: "₹300",
       instructions: [
         "Solo or team participation (max 3 members).",
@@ -122,7 +115,6 @@ function Comepetition() {
       name: "Techthon",
       img: "/Techathon.jpg",
       quote: "Turning ideas into apps!",
-      prize: "₹30,000",
       registrationFee: "₹300",
       instructions: [
         "Solo or team participation (max 3 members).",
@@ -137,7 +129,6 @@ function Comepetition() {
       name: "Kya engineer bnega re tu",
       img: "/meme.jpg",
       quote: "Turning ideas into apps!",
-      prize: "₹30,000",
       registrationFee: "₹300",
       instructions: [
         "Solo or team participation (max 3 members).",

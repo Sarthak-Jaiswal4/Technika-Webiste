@@ -343,7 +343,12 @@ function Team() {
   ]
 
   return (
-    <div className="w-full min-h-screen text-white bg-black">
+    <div className="w-full min-h-screen text-white"
+    style={{
+      backgroundImage: `url('/ChatGPT Image Apr 4, 2025, 01_41_45 AM.png')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+  }}>
         <Header/>
       <div className="w-full h-full flex flex-col justify-center items-center noise1 py-20 px-8 md:px-16">
         <NavBar Page={"Team"}/>
@@ -360,14 +365,14 @@ function Team() {
               <div className="flex flex-col items-center">
                 <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
                   <img
-                    src="college image/vc.jpeg"
+                    src="/vishvajeet.jpg"
                     alt="Prof. Samsher"
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="role-label">Chief Patron</div>
                 <h3 className="text-xl text-black font-semibold mt-2">
-                  Prof. Samsher
+                  Vishwajeet yadav
                 </h3>
                 <p className="text-gray-600">Hon'ble Vice Chancellor</p>
                 <p className="text-gray-600">HBTU Kanpur</p>
@@ -407,14 +412,13 @@ function Team() {
                   <div className="flex flex-col items-center">
                     <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
-                        src="prof img/Biswanath chattopadhyay.jpeg"
+                        src="/chayan - CHAYAN UPADHYAY BTech.jpg"
                         alt="Mrs. Anju Verma"
                         className="w-full absolute top-[5%] h-full object-contain"
                       />
                     </div>
-                    <div className="role-label">Patron</div>
                     <h3 className="text-xl text-black font-semibold mt-2">
-                      Shri. Biswanath Chattopadhyay
+                    Chayan upadhaya
                     </h3>
                   </div>
                 </div>
@@ -423,14 +427,13 @@ function Team() {
                   <div className="flex flex-col items-center">
                     <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
-                        src="prof img/Anoop kumar.jpg"
+                        src="/secMangamnet.jpg"
                         alt="Mrs. Anju Verma"
                         className="w-full absolute top-[5%] h-full object-contain"
                       />
                     </div>
-                    <div className="role-label">Patron</div>
                     <h3 className="text-xl text-black font-semibold mt-2">
-                      Shri. Anoop Trivedi
+                    Harshit omer
                     </h3>
                   </div>
                 </div>
@@ -476,9 +479,8 @@ function Team() {
             </div>
           </div>
         </div>
-      </div>
       <h1 className="text-4xl font-bold text-center mb-8">Meet the Team</h1>
-      <div className="min-h-screen w-full flex flex-wrap justify-center bg-black py-12 text-white">
+      <div className="w-full flex flex-wrap justify-center py-12 text-white">
         {teamData.map((domainData, index) => (
           <div className="md:w-1/3 w-full p-2" key={index}>
             <TeamCarousel
@@ -487,6 +489,7 @@ function Team() {
             />
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
