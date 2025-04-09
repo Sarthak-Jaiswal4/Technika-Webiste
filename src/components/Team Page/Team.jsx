@@ -39,6 +39,11 @@ function Team() {
           role: "Head",
           image: "/AshuKUmari.jpg",
         },
+        {
+          name: "Vishwa Rajdeep",
+          role: "Head",
+          image: "/vishwarajdeep.jpg",
+        },
         
       ]
     },
@@ -399,11 +404,11 @@ function Team() {
           <div className="flex justify-center mb-16">
             <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
+                <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
                   <img
                     src="/vishvajeet.jpg"
                     alt="Prof. Samsher"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="role-label">Chief Patron</div>
@@ -420,11 +425,11 @@ function Team() {
           <div className="flex justify-center mb-16">
             <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
+                <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
                   <img
                     src="/prakhar yadav secetray 2.jpg"
                     alt="Prof. Samsher"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="role-label">Chief Patron</div>
@@ -444,11 +449,11 @@ function Team() {
               <div className="flex gap-6 flex-wrap">
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/chayan - CHAYAN UPADHYAY BTech.jpg"
                         alt="Mrs. Anju Verma"
-                        className="w-full absolute top-[5%] h-full object-contain"
+                        className="w-full absolute top-[5%] h-full object-cover"
                       />
                     </div>
                     <h3 className="text-xl text-black font-semibold mt-2">
@@ -459,11 +464,11 @@ function Team() {
 
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/secMangamnet.jpg"
                         alt="Mrs. Anju Verma"
-                        className="w-full absolute top-[5%] h-full object-contain"
+                        className="w-full absolute top-[5%] h-full object-cover"
                       />
                     </div>
                     <h3 className="text-xl text-black font-semibold mt-2">
@@ -480,11 +485,11 @@ function Team() {
               <div className="flex gap-6 flex-wrap">
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/dineshdixitsec.jpg"
                         alt="Mrs. Anju Verma"
-                        className="w-full absolute top-[5%] h-full object-contain"
+                        className="w-full absolute top-[5%] h-full object-cover"
                       />
                     </div>
                     <div className="role-label">Patron</div>
@@ -496,11 +501,11 @@ function Team() {
 
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/shreyash gupta joijnt technicxal secretary.jpg"
                         alt="Mrs. Anju Verma"
-                        className="w-full absolute top-[5%] h-full object-contain"
+                        className="w-full absolute top-[5%] h-full object-cove"
                       />
                     </div>
                     <div className="role-label">Patron</div>
