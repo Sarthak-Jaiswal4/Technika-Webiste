@@ -15,6 +15,11 @@ function Team() {
           image: "/maniya event.jpg",
         },
         {
+          name: "Shubhank Gupta",
+          role: "Associate Head",
+          image: "/shubhankgupta.jpg",
+        },
+        {
           name: "ARYAN",
           role: "Head",
           image: "/aryan singh event head.jpg",
@@ -24,11 +29,27 @@ function Team() {
           role: "Head",
           image: "/sujal vent head.jpg",
         },
+        {
+          name: "Abhishek Mishra",
+          role: "Head",
+          image: "/abhishek mishra joiint technical secretary.jpg",
+        },
+        {
+          name: "Ashu Kumari",
+          role: "Head",
+          image: "/AshuKUmari.jpg",
+        },
+        
       ]
     },
     {
       domain:"Web Developemnt",
       members:[
+        {
+          name: "Sarthak Jaiswal",
+          role: "Associate Head",
+          image: "/me.jpg",
+        },
         {
           name: "Raj Jaiswal",
           role: "Head",
@@ -49,6 +70,17 @@ function Team() {
           role: "Head",
           image: "/saurabh singh public relation.jpg",
         },
+        {
+          name: "Mohit Kumar",
+          role: "Head",
+          image: "/IMG_20250301_162132 - MOHIT KUMAR BTech.jpg",
+        },
+        {
+          name: "Yashasvi",
+          role: "Head",
+          Domain :"PR",
+          image: "/yashasvi.jpg",
+        },
       ]
     },
     {
@@ -61,8 +93,13 @@ function Team() {
         },
         {
           name: "Lakshya Singht Rathorep",
-          role: "Associate Head",
+          role: "Head",
           image: "/lakshya singh rathore content head.jpg",
+        },
+        {
+          name: "Prakhar Dixit",
+          role: "Head",
+          image: "/prakhardixit.jpg",
         },
       ]
     },
@@ -125,6 +162,11 @@ function Team() {
           role: "Associate Head",
           image: "/adarsh tripathi.jpg",
         },
+        {
+          name: "Abdullah Alvi",
+          role: "Associate Head",
+          image: "/abdullah.jpg",
+        },
       ]
     },
     {
@@ -144,6 +186,11 @@ function Team() {
           name: "Swastik Soni",
           role: "Head",
           image: "/swatic soni marketing head.jpg",
+        },
+        {
+          name: "Ayush Singh",
+          role: "Head",
+          image: "/Ayush kumar singh.jpg",
         },
       ]
     },
@@ -170,12 +217,6 @@ function Team() {
           image: "https://drive.google.com/open?id=1umC82SpHAwuvgKAMKB6yd4E56ujwhtZf",
         },
         {
-          name: "Yashasvi",
-          role: "Head",
-          Domain :"PR",
-          image: "https://drive.google.com/open?id=1qNeMnz83mZ6AzGAYgX69MI7jl1lqlRC0",
-        },
-        {
           name: "Bhupendra",
           role: "Associate Head",
           image: "https://drive.google.com/open?id=1GitHelfogVw9PP_UwluquzKOCdxbzaXD",
@@ -194,11 +235,6 @@ function Team() {
           name: "Nitin Prajapati",
           role: "Head",
           image: "https://drive.google.com/open?id=1D57t65NhaxaRljVjQF1Kg0Lg9qNwPMtD",
-        },
-        {
-          name: "Mohit Kumar",
-          role: "Head",
-          image: "https://drive.google.com/open?id=1oFui4SoheawN_rKkYYj40L8gKhJI3TBH",
         },
         {
           name: "Shivansh Tiwari",
@@ -372,7 +408,7 @@ function Team() {
                 </div>
                 <div className="role-label">Chief Patron</div>
                 <h3 className="text-xl text-black font-semibold mt-2">
-                  Vishwajeet yadav
+                  Vishwajeet Yadav
                 </h3>
               </div>
             </div>
@@ -446,14 +482,14 @@ function Team() {
                   <div className="flex flex-col items-center">
                     <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
-                        src="/abhishek mishra joiint technical secretary.jpg"
+                        src="/dineshdixitsec.jpg"
                         alt="Mrs. Anju Verma"
                         className="w-full absolute top-[5%] h-full object-contain"
                       />
                     </div>
                     <div className="role-label">Patron</div>
                     <h3 className="text-xl text-black font-semibold mt-2">
-                      Abhishek Mishra
+                      Dinesh Dixit
                     </h3>
                   </div>
                 </div>

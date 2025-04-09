@@ -10,6 +10,7 @@ import About from './components/About page/About.jsx'
 import Comepetition from './components/Competetion/Comepetition.jsx'
 import Gallery from './components/gallery/Gallery.jsx'
 import Home from './components/HomePage/Home.jsx'
+import { Analytics } from "@vercel/analytics/react"
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router=createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Analytics/>
     <RouterProvider router={router}/>
   </StrictMode>,
 )

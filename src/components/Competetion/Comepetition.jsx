@@ -417,12 +417,12 @@ function Comepetition() {
               </p>
 
               {/* Prize Money */}
-              <div
+              {/* <div
                 className={`${windowinfo.accentColor} text-lg md:text-xl font-semibold`}
               >
                 🏆 Prize Money:{" "}
                 <span className={`text-white`}>{windowinfo.prize}</span>
-              </div>
+              </div> */}
 
               {/* Instructions */}
               <ul className={`list-disc pl-5 text-gray-300 text-base md:text-lg space-y-2`}>
@@ -437,7 +437,7 @@ function Comepetition() {
               </ul>
 
               {/* Apply Button */}
-              <Link to={"https://forms.gle/Rpjr5cXz3STnTu577"}
+              <Link to={windowinfo.name === "Techthon" ? "https://oscode.page.link/?sd=Join%20this%20exciting%20event%20on%20OSCode&st=Check%20out%20this%20event&apn=com.oscode.oscode&ibi=com.oscode.oscode&isi=6738602219&link=https%3A%2F%2Foscode.co.in%2Fevent%2F67f4294bad857822593b3dda" : "https://forms.gle/Rpjr5cXz3STnTu577" }
                 className={`mt-4 px-4 md:px-6 py-2 text-white text-center text-base md:text-lg font-bold ${windowinfo.bgColor} rounded-lg shadow-lg hover:bg-${windowinfo.accentColor}-600 transition-all duration-300`}
               >
                 Apply Now
