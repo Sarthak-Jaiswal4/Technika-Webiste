@@ -404,7 +404,7 @@ function Team() {
           <div className="flex justify-center mb-16">
             <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
               <div className="flex flex-col items-center">
-                <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
+                <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
                   <img
                     src="/vishvajeet.jpg"
                     alt="Prof. Samsher"
@@ -425,7 +425,7 @@ function Team() {
           <div className="flex justify-center mb-16">
             <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
               <div className="flex flex-col items-center">
-                <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
+                <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
                   <img
                     src="/prakhar yadav secetray 2.jpg"
                     alt="Prof. Samsher"
@@ -449,7 +449,7 @@ function Team() {
               <div className="flex gap-6 flex-wrap">
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/chayan - CHAYAN UPADHYAY BTech.jpg"
                         alt="Mrs. Anju Verma"
@@ -464,7 +464,7 @@ function Team() {
 
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/secMangamnet.jpg"
                         alt="Mrs. Anju Verma"
@@ -485,7 +485,7 @@ function Team() {
               <div className="flex gap-6 flex-wrap">
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/dineshdixitsec.jpg"
                         alt="Mrs. Anju Verma"
@@ -501,7 +501,7 @@ function Team() {
 
                 <div className="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
                   <div className="flex flex-col items-center">
-                    <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
+                    <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
                       <img
                         src="/shreyash gupta joijnt technicxal secretary.jpg"
                         alt="Mrs. Anju Verma"
