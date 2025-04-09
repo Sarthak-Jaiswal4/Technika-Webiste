@@ -374,8 +374,6 @@ function Team() {
                 <h3 className="text-xl text-black font-semibold mt-2">
                   Vishwajeet yadav
                 </h3>
-                <p className="text-gray-600">Hon'ble Vice Chancellor</p>
-                <p className="text-gray-600">HBTU Kanpur</p>
               </div>
             </div>
           </div>
