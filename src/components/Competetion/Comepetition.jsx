@@ -178,8 +178,8 @@ function Comepetition() {
   const searchImageForWindow = useCallback(
     (imageEl) => {
       const src = imageEl.src;
-      const relativeSrc = src.replace("http://localhost:5173", "");
-      // const relativeSrc = src.replace("https://technika-webiste.vercel.app", "");
+      // const relativeSrc = src.replace("http://localhost:5173", "");
+      const relativeSrc = src.replace("https://technika-webiste.vercel.app", "");
       const info = competitionInfo.find((item) => item.img === relativeSrc);
       console.log(info)
       setwindowinfo(info);
