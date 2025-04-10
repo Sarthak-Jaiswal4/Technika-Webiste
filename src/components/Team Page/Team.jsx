@@ -195,7 +195,7 @@ function Team() {
         {
           name: "Ayush Singh",
           role: "Head",
-          image: "/Ayush kumar singh.jpg",
+          image: "/ayushSingh.jpg",
         },
       ]
     },
